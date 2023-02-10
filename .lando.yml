@@ -1,0 +1,14 @@
+name: deable-console
+services:
+  app:
+    type: php:7.3
+    via: cli
+tooling:
+  composer:
+    service: app
+    description: Run Composer
+    cmd: composer
+  php:
+    service: app
+    description: Run PHP cli
+    cmd: php
