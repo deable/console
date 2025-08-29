@@ -22,7 +22,7 @@ final class ConsoleHelper
 		'--debug',
 	];
 
-	public static function setupMode(Configurator $configurator, callable $setupFunction = null): void
+	public static function setupMode(Configurator $configurator, ?callable $setupFunction = null): void
 	{
 		if (PHP_SAPI === 'cli' && self::isConsoleDebug()) {
 			$configurator->setDebugMode(true);
